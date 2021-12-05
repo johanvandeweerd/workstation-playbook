@@ -11,3 +11,5 @@
       tags: gnome
     - role: google-chrome
       tags: google-chrome
+    - role: resolved
+      tags: resolved
