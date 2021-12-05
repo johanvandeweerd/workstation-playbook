@@ -1,0 +1,43 @@
+- name: Install samba and cifs-utils
+  become: true
+  apt:
+    name:
+      - samba
+      - cifs-utils
+
+- name: Check if smbcredentials file exists
+  stat: 
+    path: "{{ ansible_user_dir }}/.smbcredentials"
+  register: credentials_file
+
+- name: Get Samba password from 1Password
+  onepassword_info:
+    search_terms:
+      - name: johan@nas.local.engine31.io
+  register: onepassword
+  no_log: true
+  when: not credentials_file.stat.exists
+
+- name: Set samba_password variable
+  set_fact:
+    samba_password: "{{ onepassword.onepassword['johan@nas.local.engine31.io'].password }}"
+  when: not credentials_file.stat.exists
+
+- name: Create smbcredentials file
+  ansible.builtin.template:
+    src: templates/smbcredentials
+    dest: ~/.smbcredentials
+    force: false
+    owner: "{{ ansible_user_id }}"
+    group: "{{ ansible_user_id }}"
+    mode: 0400
+  when: not credentials_file.stat.exists
+
+- name: Mount shared volume from NAS
+  become: true
+  mount:
+    state: mounted
+    fstype: cifs
+    name: /media/shared/
+    src: //10.31.10.20/shared
+    opts: "auto,credentials={{ ansible_user_dir }}/.smbcredentials,iocharset=utf8,sec=ntlmssp,uid={{ ansible_user_id }},rw,vers=2.1"

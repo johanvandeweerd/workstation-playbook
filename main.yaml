@@ -13,3 +13,5 @@
       tags: google-chrome
     - role: resolved
       tags: resolved
+    - role: samba
+      tags: samba
