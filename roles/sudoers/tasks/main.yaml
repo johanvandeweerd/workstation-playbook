@@ -1,0 +1,6 @@
+- name: Add user to sudoers
+  become: true
+  ansible.builtin.template:
+    src: templates/sudoers
+    dest: "/etc/sudoers.d/{{ ansible_user_id }}"
+    mode: 0440
