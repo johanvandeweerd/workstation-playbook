@@ -7,3 +7,5 @@
       tags: asdf
     - role: git
       tags: git
+    - role: gnome
+      tags: gnome

@@ -1,0 +1,16 @@
+- name: Install Gnome extensions
+  ansible.builtin.include_tasks: extension.yaml
+  vars:
+    name: "{{ extension.name }}"
+    full_name: "{{ extension.full_name }}"
+    url: "{{ extension.url }}"
+    configuration: "{{ extension.configuration }}"
+  loop: "{{ extensions }}"
+  loop_control:
+    loop_var: extension
+
+- name: Configure keyboard shortcuts
+  ansible.builtin.include_tasks: shortcuts.yaml
+
+- name: Configure desktop
+  ansible.builtin.include_tasks: desktop.yaml

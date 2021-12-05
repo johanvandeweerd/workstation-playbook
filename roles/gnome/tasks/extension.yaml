@@ -1,0 +1,37 @@
+- name: Create temporary directory
+  ansible.builtin.tempfile:
+    state: directory
+    suffix: gnome-extension
+  register: temp_directory
+
+- name: Download {{ name }} extension
+  get_url:
+    url: "{{ url }}"
+    dest: "{{ temp_directory.path }}/{{ full_name }}.zip"
+
+- name: Install {{ name }} Gnome extension
+  shell: "gnome-extensions install --force {{ temp_directory.path }}/{{ full_name }}.zip"
+
+- name: Get dconf value of /org/gnome/shell/enabled-extensions
+  dconf:
+    key: /org/gnome/shell/enabled-extensions
+    state: read
+  register: enabled_extensions
+
+- name: Enable extension in dconf
+  dconf:
+    key: /org/gnome/shell/enabled-extensions
+    value: "@as {{ (enabled_extensions.value  | default('[]', true) | string | replace(\"'\", '\"') | from_json + [full_name]) | unique }}"
+
+- name: Copy dconf schema of extension
+  shell: "sudo cp -f ~/.local/share/gnome-shell/extensions/{{ full_name }}/schemas/*.xml /usr/share/glib-2.0/schemas"
+
+- name: Load dconf schema of extension
+  become: true
+  shell: glib-compile-schemas /usr/share/glib-2.0/schemas
+
+- name: Configure {{ name }} Gnome extension
+  dconf:
+    key: "{{ item.key }}"
+    value: "{{ item.value }}"
+  with_items: "{{ configuration }}"

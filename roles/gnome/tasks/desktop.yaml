@@ -1,0 +1,4 @@
+- name: Hide network volumes on desktop
+  dconf:
+    key: /org/gnome/shell/extensions/ding/show-volumes
+    value: "false"

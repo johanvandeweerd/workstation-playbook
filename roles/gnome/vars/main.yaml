@@ -1,0 +1,247 @@
+extensions:
+  - name: dash-to-dock
+    full_name: dash-to-dock@micxgx.gmail.com
+    url: https://extensions.gnome.org/extension-data/dash-to-dockmicxgx.gmail.com.v69.shell-extension.zip
+    configuration:
+      - key: /org/gnome/shell/extensions/dash-to-dock/autohide
+        value: "true"
+      - key: /org/gnome/shell/extensions/dash-to-dock/dash-max-icon-size
+        value: "64"
+      - key: /org/gnome/shell/extensions/dash-to-dock/dock-fixed
+        value: "false"
+      - key: /org/gnome/shell/extensions/dash-to-dock/dock-position
+        value: "'BOTTOM'"
+      - key: /org/gnome/shell/extensions/dash-to-dock/intellihide
+        value: "false"
+      - key: /org/gnome/shell/extensions/dash-to-dock/show-favorites
+        value: "false"
+      - key: /org/gnome/shell/extensions/dash-to-dock/show-mounts
+        value: "false"
+      - key: /org/gnome/shell/extensions/dash-to-dock/show-show-apps-button
+        value: "false"
+      - key: /org/gnome/shell/extensions/dash-to-dock/show-trash
+        value: "true"
+  - name: ddterm
+    full_name: ddterm@amezin.github.com
+    url: https://extensions.gnome.org/extension-data/ddtermamezin.github.com.v24.shell-extension.zip
+    configuration:
+      - key: /com/github/amezin/ddterm/background-opacity
+        value: "0.94999999999999996"
+      - key: /com/github/amezin/ddterm/custom-font
+        value: "'MesloLGS Nerd Font 10'"
+      - key: /com/github/amezin/ddterm/ddterm-toggle-hotkey
+        value: "['<Alt>grave']"
+      - key: /com/github/amezin/ddterm/hide-animation
+        value: "'disable'"
+      - key: /com/github/amezin/ddterm/hide-when-focus-lost
+        value: "true"
+      - key: /com/github/amezin/ddterm/hide-window-on-esc
+        value: "false"
+      - key: /com/github/amezin/ddterm/panel-icon-type
+        value: "'none'"
+      - key: /com/github/amezin/ddterm/scrollback-unlimited
+        value: "true"
+      - key: /com/github/amezin/ddterm/show-animation
+        value: "'disable'"
+      - key: /com/github/amezin/ddterm/tab-policy
+        value: "'never'"
+      - key: /com/github/amezin/ddterm/tab-position
+        value: "'left'"
+      - key: /com/github/amezin/ddterm/theme-variant
+        value: "'dark'"
+      - key: /com/github/amezin/ddterm/use-system-font
+        value: "false"
+      - key: /com/github/amezin/ddterm/window-maximize
+        value: "false"
+      - key: /com/github/amezin/ddterm/window-resizable
+        value: "false"
+      - key: /com/github/amezin/ddterm/window-size
+        value: "0.5"        
+  - name: gTile
+    full_name: gTile@vibou
+    url: https://extensions.gnome.org/extension-data/gTilevibou.v47.shell-extension.zip
+    configuration:
+      - key: /org/gnome/shell/extensions/gtile/action-change-tiling
+        value: "@as []"
+      - key: /org/gnome/shell/extensions/gtile/action-contract-bottom
+        value: "@as []"
+      - key: /org/gnome/shell/extensions/gtile/animation
+        value: "false"
+      - key: /org/gnome/shell/extensions/gtile/auto-close
+        value: "false"
+      - key: /org/gnome/shell/extensions/gtile/autotile-1
+        value: "@as []"
+      - key: /org/gnome/shell/extensions/gtile/autotile-10
+        value: "@as []"
+      - key: /org/gnome/shell/extensions/gtile/autotile-2
+        value: "@as []"
+      - key: /org/gnome/shell/extensions/gtile/autotile-3
+        value: "@as []"
+      - key: /org/gnome/shell/extensions/gtile/autotile-4
+        value: "@as []"
+      - key: /org/gnome/shell/extensions/gtile/autotile-5
+        value: "@as []"
+      - key: /org/gnome/shell/extensions/gtile/autotile-6
+        value: "@as []"
+      - key: /org/gnome/shell/extensions/gtile/autotile-7
+        value: "@as []"
+      - key: /org/gnome/shell/extensions/gtile/autotile-8
+        value: "@as []"
+      - key: /org/gnome/shell/extensions/gtile/autotile-9
+        value: "@as []"
+      - key: /org/gnome/shell/extensions/gtile/autotile-main
+        value: "@as []"
+      - key: /org/gnome/shell/extensions/gtile/cancel-tiling
+        value: "@as []"
+      - key: /org/gnome/shell/extensions/gtile/change-grid-size
+        value: "@as []"
+      - key: /org/gnome/shell/extensions/gtile/global-presets
+        value: "true"
+      - key: /org/gnome/shell/extensions/gtile/grid-sizes
+        value: "''"
+      - key: /org/gnome/shell/extensions/gtile/move-down-vi
+        value: "@as []"
+      - key: /org/gnome/shell/extensions/gtile/move-left-vi
+        value: "@as []"
+      - key: /org/gnome/shell/extensions/gtile/move-right-vi
+        value: "@as []"
+      - key: /org/gnome/shell/extensions/gtile/move-up-vi
+        value: "@as []"
+      - key: /org/gnome/shell/extensions/gtile/preset-resize-1
+        value: "['<Alt>KP_1']"
+      - key: /org/gnome/shell/extensions/gtile/preset-resize-10
+        value: "@as []"
+      - key: /org/gnome/shell/extensions/gtile/preset-resize-11
+        value: "@as []"
+      - key: /org/gnome/shell/extensions/gtile/preset-resize-12
+        value: "@as []"
+      - key: /org/gnome/shell/extensions/gtile/preset-resize-13
+        value: "@as []"
+      - key: /org/gnome/shell/extensions/gtile/preset-resize-14
+        value: "@as []"
+      - key: /org/gnome/shell/extensions/gtile/preset-resize-15
+        value: "@as []"
+      - key: /org/gnome/shell/extensions/gtile/preset-resize-16
+        value: "@as []"
+      - key: /org/gnome/shell/extensions/gtile/preset-resize-17
+        value: "@as []"
+      - key: /org/gnome/shell/extensions/gtile/preset-resize-18
+        value: "@as []"
+      - key: /org/gnome/shell/extensions/gtile/preset-resize-19
+        value: "@as []"
+      - key: /org/gnome/shell/extensions/gtile/preset-resize-2
+        value: "['<Alt>KP_2']"
+      - key: /org/gnome/shell/extensions/gtile/preset-resize-21
+        value: "@as []"
+      - key: /org/gnome/shell/extensions/gtile/preset-resize-22
+        value: "@as []"
+      - key: /org/gnome/shell/extensions/gtile/preset-resize-23
+        value: "@as []"
+      - key: /org/gnome/shell/extensions/gtile/preset-resize-24
+        value: "@as []"
+      - key: /org/gnome/shell/extensions/gtile/preset-resize-25
+        value: "@as []"
+      - key: /org/gnome/shell/extensions/gtile/preset-resize-26
+        value: "@as []"
+      - key: /org/gnome/shell/extensions/gtile/preset-resize-27
+        value: "@as []"
+      - key: /org/gnome/shell/extensions/gtile/preset-resize-28
+        value: "@as []"
+      - key: /org/gnome/shell/extensions/gtile/preset-resize-29
+        value: "@as []"
+      - key: /org/gnome/shell/extensions/gtile/preset-resize-3
+        value: "['<Alt>KP_3']"
+      - key: /org/gnome/shell/extensions/gtile/preset-resize-30
+        value: "@as []"
+      - key: /org/gnome/shell/extensions/gtile/preset-resize-4
+        value: "['<Alt>KP_4']"
+      - key: /org/gnome/shell/extensions/gtile/preset-resize-5
+        value: "['<Alt>KP_5']"
+      - key: /org/gnome/shell/extensions/gtile/preset-resize-6
+        value: "['<Alt>KP_6']"
+      - key: /org/gnome/shell/extensions/gtile/preset-resize-7
+        value: "['<Alt>KP_7']"
+      - key: /org/gnome/shell/extensions/gtile/preset-resize-8
+        value: "['<Alt>KP_8']"
+      - key: /org/gnome/shell/extensions/gtile/preset-resize-9
+        value: "['<Alt>KP_9']"
+      - key: /org/gnome/shell/extensions/gtile/resize-down-vi
+        value: "@as []"
+      - key: /org/gnome/shell/extensions/gtile/resize-left-vi
+        value: "@as []"
+      - key: /org/gnome/shell/extensions/gtile/resize-right-vi
+        value: "@as []"
+      - key: /org/gnome/shell/extensions/gtile/resize-up-vi
+        value: "@as []"
+      - key: /org/gnome/shell/extensions/gtile/resize1
+        value: "'7x1 0:0 1:0'"
+      - key: /org/gnome/shell/extensions/gtile/resize10
+        value: "''"
+      - key: /org/gnome/shell/extensions/gtile/resize11
+        value: "''"
+      - key: /org/gnome/shell/extensions/gtile/resize12
+        value: "''"
+      - key: /org/gnome/shell/extensions/gtile/resize13
+        value: "''"
+      - key: /org/gnome/shell/extensions/gtile/resize14
+        value: "''"
+      - key: /org/gnome/shell/extensions/gtile/resize15
+        value: "''"
+      - key: /org/gnome/shell/extensions/gtile/resize16
+        value: "''"
+      - key: /org/gnome/shell/extensions/gtile/resize17
+        value: "''"
+      - key: /org/gnome/shell/extensions/gtile/resize18
+        value: "''"
+      - key: /org/gnome/shell/extensions/gtile/resize19
+        value: "''"
+      - key: /org/gnome/shell/extensions/gtile/resize2
+        value: "'7x1 2:0 4:0'"
+      - key: /org/gnome/shell/extensions/gtile/resize20
+        value: "''"
+      - key: /org/gnome/shell/extensions/gtile/resize21
+        value: "''"
+      - key: /org/gnome/shell/extensions/gtile/resize22
+        value: "''"
+      - key: /org/gnome/shell/extensions/gtile/resize23
+        value: "''"
+      - key: /org/gnome/shell/extensions/gtile/resize24
+        value: "''"
+      - key: /org/gnome/shell/extensions/gtile/resize25
+        value: "''"
+      - key: /org/gnome/shell/extensions/gtile/resize26
+        value: "''"
+      - key: /org/gnome/shell/extensions/gtile/resize27
+        value: "''"
+      - key: /org/gnome/shell/extensions/gtile/resize28
+        value: "''"
+      - key: /org/gnome/shell/extensions/gtile/resize29
+        value: "''"
+      - key: /org/gnome/shell/extensions/gtile/resize3
+        value: "'7x1 5:0 6:0'"
+      - key: /org/gnome/shell/extensions/gtile/resize30
+        value: "''"
+      - key: /org/gnome/shell/extensions/gtile/resize4
+        value: "'3x1 0:0 0:0'"
+      - key: /org/gnome/shell/extensions/gtile/resize5
+        value: "'3x1 1:0 1:0'"
+      - key: /org/gnome/shell/extensions/gtile/resize6
+        value: "'3x1 2:0 2:0'"
+      - key: /org/gnome/shell/extensions/gtile/resize7
+        value: "'2x1 0:0 0:0'"
+      - key: /org/gnome/shell/extensions/gtile/resize8
+        value: "'1x1 0:0 0:0'"
+      - key: /org/gnome/shell/extensions/gtile/resize9
+        value: "'2x1 1:0 1:0'"
+      - key: /org/gnome/shell/extensions/gtile/set-tiling
+        value: "@as []"
+      - key: /org/gnome/shell/extensions/gtile/show-icon
+        value: "false"
+      - key: /org/gnome/shell/extensions/gtile/show-toggle-tiling
+        value: "@as []"
+      - key: /org/gnome/shell/extensions/gtile/show-toggle-tiling-alt
+        value: "@as []"
+      - key: /org/gnome/shell/extensions/gtile/snap-to-neighbors
+        value: "@as []"
+      - key: /org/gnome/shell/extensions/gtile/theme
+        value: "'Default'"
