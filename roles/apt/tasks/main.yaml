@@ -1,0 +1,12 @@
+- name: Install apt software
+  become: true
+  apt:
+    name:
+      - curl
+      - chrome-gnome-shell
+      - dconf-editor
+      - gnome-tweak-tool
+      - jq
+      - tree
+      - vim
+      - xclip
