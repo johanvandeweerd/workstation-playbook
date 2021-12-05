@@ -1,0 +1,8 @@
+- name: Install zsh
+  ansible.builtin.include_tasks: zsh.yaml
+
+- name: Install Oh My Zsh
+  ansible.builtin.include_tasks: oh-my-zsh.yaml
+
+- name: Install Powerlevel10k theme
+  ansible.builtin.include_tasks: powerlevel10k.yaml

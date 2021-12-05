@@ -1,0 +1,23 @@
+- name: Install Powerlevel10K theme for Oh My Zsh
+  git:
+    repo: https://github.com/romkatv/powerlevel10k.git
+    dest: ~/.oh-my-zsh/themes/powerlevel10k
+    depth: 1
+
+- name: Copy .Powerlevel10k config
+  copy:
+    src: p10k.zsh
+    dest: ~/.p10k.zsh
+
+- name: Install font for Powerlevel10k theme
+  get_url:
+    url: https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/Meslo/S/Regular/complete/Meslo%20LG%20S%20Regular%20Nerd%20Font%20Complete.ttf?raw=true
+    dest: ~/.local/share/fonts/Meslo LG S Regular Nerd Font Complete.ttf
+
+  # Ref https://ncona.com/2019/11/configuring-gnome-terminal-programmatically/
+- name: Get gsettings id of default profile in Terminal
+  shell: gsettings get org.gnome.Terminal.ProfilesList default | awk -F \' '{print $2}'
+  register: profile_id
+
+- name: Set font for default profile in Terminal
+  shell: "gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:{{profile_id.stdout}}/ font 'MesloLGS Nerd Font 11'"
