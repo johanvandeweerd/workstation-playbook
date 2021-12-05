@@ -17,3 +17,5 @@
       tags: samba
     - role: snap
       tags: snap
+    - role: ssh
+      tags: ssh

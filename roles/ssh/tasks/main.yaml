@@ -1,0 +1,17 @@
+- name: Install keyring software
+  apt:
+    name:
+      - gnome-keyring
+      - keychain
+      - seahorse
+
+- name: Create SSH config
+  ansible.builtin.copy:
+    src: files/config
+    dest: ~/.ssh/
+
+- name: Download SSH keys from 1password
+  ansible.builtin.include_tasks: keys.yaml
+  vars:
+    ssh_key: "{{ item }}"
+  loop: "{{ ssh_keys }}"

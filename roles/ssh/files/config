@@ -1,0 +1,33 @@
+# vi: ft=sshconfig
+
+IgnoreUnknown UseKeychain
+
+Host router
+  HostName router
+  User ubnt
+  IdentityFile ~/.ssh/home_rsa
+  IdentitiesOnly yes
+  UseKeychain yes
+
+Host pi01 pi02 pi03 pi04 pi05 pi06 pi07 pi08
+  User engine31
+  IdentityFile ~/.ssh/cluster_rsa
+  IdentitiesOnly yes
+  UseKeychain yes
+
+Host bitbucket.org
+  HostName bitbucket.org
+  User git
+  IdentityFile ~/.ssh/bitbucket_rsa
+  IdentitiesOnly yes
+  UseKeychain yes
+
+Host github.com
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/github_rsa
+  IdentitiesOnly yes
+  UseKeychain yes
+
+Host *
+   AddKeysToAgent yes

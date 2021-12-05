@@ -1,0 +1,32 @@
+- name: Check if private key {{ ssh_key }} file exists
+  stat: 
+    path: "~/.ssh/{{ ssh_key }}"
+  register: private_key
+
+- name: Check if public key {{ ssh_key }} file exists
+  stat: 
+    path: "~/.ssh/{{ ssh_key }}.pub"
+  register: public_key
+
+- name: "Get SSH private key {{ ssh_key }} from 1Password"
+  onepassword_info:
+    search_terms:
+      - name: "{{ ssh_key }}-private_key"
+      - name: "{{ ssh_key }}-public_key"
+  register: ssh_key_content
+  no_log: true
+  when: not private_key.stat.exists or not public_key.stat.exists
+
+- name: "Copy private key file {{ ssh_key }}"
+  copy:
+    content: "{{ ssh_key_content.onepassword[ssh_key + '-private_key'].document }}\n"
+    dest: "~/.ssh/{{ ssh_key }}"
+    mode: 0400
+  when: not private_key.stat.exists
+
+- name: "Copy public key file {{ ssh_key }}"
+  copy:
+    content: "{{ ssh_key_content.onepassword[ssh_key + '-public_key'].document }}\n"
+    dest: "~/.ssh/{{ ssh_key }}.pub"
+    mode: 0644
+  when: not public_key.stat.exists
