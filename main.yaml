@@ -21,3 +21,5 @@
       tags: ssh
     - role: sudoers
       tags: sudoers
+    - role: tmux
+      tags: tmux
