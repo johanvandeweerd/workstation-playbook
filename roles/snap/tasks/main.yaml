@@ -1,0 +1,16 @@
+- name: Install Snap software
+  community.general.snap:
+    name:
+      - 1password
+      - pinta
+      - spotify
+      - vlc
+      - yq
+
+- name: Install classic Snap software
+  community.general.snap:
+    classic: true
+    name:
+    - code
+    - goland
+    - intellij-idea-ultimate

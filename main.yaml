@@ -15,3 +15,5 @@
       tags: resolved
     - role: samba
       tags: samba
+    - role: snap
+      tags: snap
