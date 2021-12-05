@@ -1,0 +1,42 @@
+- name: Install git
+  apt:
+    name:
+      - git
+
+- name: Install asdf
+  git:
+    repo: https://github.com/asdf-vm/asdf.git
+    dest: ~/.asdf
+    version: v0.8.1
+    depth: 1
+
+- name: Install asdf plugins
+  include_role:
+    name: cimon-io.asdf
+  vars:
+    asdf_user: "{{ ansible_user_id }}"
+    asdf_plugins:
+      - name: awscli
+        versions:
+          - 2.4.5
+      - name: golang
+        versions:
+          - 1.17.3
+      - name: helm
+        versions:
+          - 3.7.1
+      - name: java
+        versions:
+          - openjdk-17
+      - name: kind
+        versions:
+          - 0.11.1
+      - name: krew
+        versions:
+          - 0.4.2
+      - name: kubectl
+        versions:
+          - 1.22.4
+      - name: terraform
+        versions:
+          - 0.15.5
