@@ -1,0 +1,5 @@
+# Install dependencies using following command:
+# ansible-galaxy install -r requirements.yaml
+
+collections:
+  - name: community.general
