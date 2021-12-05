@@ -1,0 +1,9 @@
+- name: Install Git
+  apt:
+    name:
+      - git
+
+- name: Copy the gitconfig file
+  ansible.builtin.template:
+    src: templates/gitconfig
+    dest: ~/.gitconfig

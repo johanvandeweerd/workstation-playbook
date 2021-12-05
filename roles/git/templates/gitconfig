@@ -1,0 +1,35 @@
+[user]
+    name = Johan Vandeweerd
+    email = johan@vandeweerd.be
+
+[core]
+    excludesfile = {{ ansible_user_dir }}/.gitignore_global
+    editor = vim
+    autocrlf = false
+
+[alias]
+    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
+    co = checkout
+    cp = cherry-pick
+    p = pull -r
+
+[fetch]
+    purge = true
+
+[pull]
+    rebase = true
+
+[merge]
+    tool = vscode
+
+[mergetool "vscode"]
+    cmd = code --wait $MERGED
+
+[diff]
+    tool = vscode
+
+[difftool "vscode"]
+    cmd = code --wait --diff $LOCAL $REMOTE
+
+[remote "origin"]
+	prune = true
