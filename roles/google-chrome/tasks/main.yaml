@@ -1,0 +1,23 @@
+- name: Install apt-transport-https
+  become: true
+  ansible.builtin.apt:
+    state: latest
+    update_cache: true
+
+- name: Add Apt signing key
+  become: true
+  ansible.builtin.apt_key:
+    url: "https://dl.google.com/linux/linux_signing_key.pub"
+
+- name: Add repository into sources list
+  become: true
+  ansible.builtin.apt_repository:
+    repo: deb [arch=amd64] https://dl.google.com/linux/chrome/deb/ stable main
+    filename: google-chrome
+
+- name: Install google-chrome-stable
+  become: true
+  ansible.builtin.apt:
+    name: "google-chrome-stable"
+    state: latest
+    update_cache: true

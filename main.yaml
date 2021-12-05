@@ -9,3 +9,5 @@
       tags: git
     - role: gnome
       tags: gnome
+    - role: google-chrome
+      tags: google-chrome
