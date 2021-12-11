@@ -10,7 +10,9 @@
     name: "{{ ansible_user_id }}"
     shell: /bin/zsh
 
-- name: Copy .zshrc
-  copy:
-    src: zshrc
+- name: Symlink the zshrc file
+  ansible.builtin.file:
+    src: "{{ playbook_dir }}/roles/zsh/files/zshrc"
     dest: ~/.zshrc
+    force: true
+    state: link
