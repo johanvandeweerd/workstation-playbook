@@ -6,9 +6,17 @@
       - seahorse
 
 - name: Create SSH config
-  ansible.builtin.copy:
-    src: files/config
-    dest: ~/.ssh/
+  ansible.builtin.file:
+    path: ~/.ssh/
+    state: directory
+    mode: 0700
+
+- name: Symlink the ssh config file
+  ansible.builtin.file:
+    src: "{{ playbook_dir }}/roles/ssh/files/config"
+    dest: ~/.ssh/config
+    force: true
+    state: link
 
 - name: Download SSH keys from 1password
   ansible.builtin.include_tasks: keys.yaml

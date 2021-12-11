@@ -21,7 +21,7 @@
   copy:
     content: "{{ ssh_key_content.onepassword[ssh_key + '-private_key'].document }}\n"
     dest: "~/.ssh/{{ ssh_key }}"
-    mode: 0400
+    mode: 0600
   when: not private_key.stat.exists
 
 - name: "Copy public key file {{ ssh_key }}"
