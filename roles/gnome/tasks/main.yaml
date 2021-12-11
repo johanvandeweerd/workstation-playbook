@@ -1,3 +1,12 @@
+- name: Configure desktop
+  ansible.builtin.include_tasks: desktop.yaml
+
+- name: Configure windows manager
+  ansible.builtin.include_tasks: windows-manager.yaml
+
+- name: Configure keyboard shortcuts
+  ansible.builtin.include_tasks: shortcuts.yaml
+
 - name: Install Gnome extensions
   ansible.builtin.include_tasks: extension.yaml
   vars:
@@ -8,9 +17,3 @@
   loop: "{{ extensions }}"
   loop_control:
     loop_var: extension
-
-- name: Configure keyboard shortcuts
-  ansible.builtin.include_tasks: shortcuts.yaml
-
-- name: Configure desktop
-  ansible.builtin.include_tasks: desktop.yaml

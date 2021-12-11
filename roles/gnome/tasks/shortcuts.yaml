@@ -1,4 +1,4 @@
-- name: Configure Gnome
+- name: Configure keyboard shortcuts
   dconf:
     key: "{{ item.key }}"
     value: "{{ item.value }}"

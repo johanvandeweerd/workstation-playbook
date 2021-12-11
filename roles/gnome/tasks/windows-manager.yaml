@@ -1,0 +1,13 @@
+- name: Configure Gnome windows manager
+  dconf:
+    key: "{{ item.key }}"
+    value: "{{ item.value }}"
+  with_items:
+    - key: /org/gnome/desktop/wm/preferences/button-layout
+      value: "':minimize,maximize,close'"
+    - key: /org/gnome/desktop/interface/gtk-theme
+      value: "'Yaru'"
+    - key: /org/gnome/desktop/interface/icon-theme
+      value: "'Yaru'"
+    - key: /org/gnome/desktop/sound/theme-name
+      value: "'Yaru'"
