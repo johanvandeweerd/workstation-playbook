@@ -1,0 +1,8 @@
+- name: Check if extension {{ item }} is already installed
+  stat: 
+    path: "~/.vscode/extensions/{{ item }}"
+  register: extension_installed
+
+- name: Install extension {{ item }}
+  ansible.builtin.shell: "code --install-extension {{ item }}"
+  when: not extension_installed.stat.exists

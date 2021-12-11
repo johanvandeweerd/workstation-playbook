@@ -1,0 +1,47 @@
+{
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.minimap.enabled": false,
+    "editor.renderWhitespace": "all",
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "files.autoSave": "afterDelay",
+    "git.autofetch": true,
+    "git.confirmSync": false,
+    "git.suggestSmartCommit": false,
+    "go.delveConfig": {
+        "dlvLoadConfig": {
+            "followPointers": true,
+            "maxVariableRecurse": 1,
+            "maxStringLen": 1000,
+            "maxArrayValues": 64,
+            "maxStructFields": -1
+        },
+        "apiVersion": 2,
+        "showGlobalVariables": false
+    },
+    "go.installDependenciesWhenBuilding": true,
+    "go.toolsManagement.autoUpdate": true,
+    "liveshare.authenticationProvider": "GitHub",
+    "liveshare.presence": true,
+    "liveshare.sharedTerminalHeight": 100,
+    "liveshare.sharedTerminalWidth": 240,
+    "redhat.telemetry.enabled": true,
+    "security.workspace.trust.untrustedFiles": "open",
+    "terminal.external.osxExec": "iTerm.app",
+    "terminal.integrated.fontFamily": "MesloLGS Nerd Font",
+    "workbench.colorTheme": "Default Light+",
+    "workbench.editor.untitled.hint": "hidden",
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.tree.indent": 20,
+    "[go]": {
+        "editor.insertSpaces": false,
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+        }
+    },
+    "[terraform]": {
+        "editor.defaultFormatter": "hashicorp.terraform",
+        "editor.formatOnSave": true
+    }
+}

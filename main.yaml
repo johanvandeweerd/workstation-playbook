@@ -23,5 +23,7 @@
       tags: sudoers
     - role: tmux
       tags: tmux
+    - role: vscode
+      tags: vscode
     - role: zsh
       tags: zsh

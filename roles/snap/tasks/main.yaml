@@ -11,6 +11,5 @@
   community.general.snap:
     classic: true
     name:
-    - code
     - goland
     - intellij-idea-ultimate

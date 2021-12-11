@@ -1,0 +1,27 @@
+- name: Install Visual Studio Code through Snap
+  community.general.snap:
+    classic: true
+    name:
+    - code
+
+- name: Symlink the settings.json file
+  ansible.builtin.file:
+    src: "{{ playbook_dir }}/roles/vscode/files/settings.json"
+    dest: ~/.config/Code/User/settings.json
+    force: true
+    state: link
+
+- name: Install extensions
+  ansible.builtin.include_tasks: extension.yaml
+  with_items:
+    - eamodio.gitlens
+    - fredwangwang.vscode-hcl-format
+    - golang.go
+    - hashicorp.terraform
+    - humao.rest-client
+    - ms-azuretools.vscode-docker
+    - ms-vsliveshare.vsliveshare
+    - redhat.vscode-xml
+    - redhat.vscode-yaml
+    - wholroyd.hcl
+    - wholroyd.jinja
