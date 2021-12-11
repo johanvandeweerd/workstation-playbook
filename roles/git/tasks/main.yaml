@@ -3,7 +3,9 @@
     name:
       - git
 
-- name: Copy the gitconfig file
-  ansible.builtin.template:
-    src: templates/gitconfig
+- name: Symlink the gitconfig file
+  ansible.builtin.file:
+    src: "{{ playbook_dir }}/roles/git/files/gitconfig"
     dest: ~/.gitconfig
+    force: true
+    state: link

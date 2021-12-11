@@ -3,7 +3,7 @@
     email = johan@vandeweerd.be
 
 [core]
-    excludesfile = {{ ansible_user_dir }}/.gitignore_global
+    excludesfile = ~/.gitignore_global
     editor = vim
     autocrlf = false
 
