@@ -1,5 +1,12 @@
-- name: Create tmux config
-  ansible.builtin.copy:
-    src: files/tmux.conf
-    dest: "{{ ansible_user_dir }}/.tmux.conf"
-    mode: 0644
+- name: Install tmux
+  become: true
+  apt:
+    name:
+      - tmux
+
+- name: Symlink the tmux config file
+  ansible.builtin.file:
+    src: "{{ playbook_dir }}/roles/tmux/files/tmux.conf"
+    dest: ~/.tmux.conf
+    force: true
+    state: link
