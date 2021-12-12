@@ -56,7 +56,27 @@ extensions:
       - key: /com/github/amezin/ddterm/window-resizable
         value: "false"
       - key: /com/github/amezin/ddterm/window-size
-        value: "0.5"        
+        value: "0.5"
+      - key: /com/github/amezin/ddterm/shortcut-switch-to-tab-1
+        value: "@as []"
+      - key: /com/github/amezin/ddterm/shortcut-switch-to-tab-2
+        value: "@as []"
+      - key: /com/github/amezin/ddterm/shortcut-switch-to-tab-3
+        value: "@as []"
+      - key: /com/github/amezin/ddterm/shortcut-switch-to-tab-4
+        value: "@as []"
+      - key: /com/github/amezin/ddterm/shortcut-switch-to-tab-5
+        value: "@as []"
+      - key: /com/github/amezin/ddterm/shortcut-switch-to-tab-6
+        value: "@as []"
+      - key: /com/github/amezin/ddterm/shortcut-switch-to-tab-7
+        value: "@as []"
+      - key: /com/github/amezin/ddterm/shortcut-switch-to-tab-8
+        value: "@as []"
+      - key: /com/github/amezin/ddterm/shortcut-switch-to-tab-9
+        value: "@as []"
+      - key: /com/github/amezin/ddterm/shortcut-switch-to-tab-10
+        value: "@as []"
   - name: gTile
     full_name: gTile@vibou
     url: https://extensions.gnome.org/extension-data/gTilevibou.v47.shell-extension.zip
