@@ -1,0 +1,48 @@
+- name: Ensure old versions of Docker are not installed
+  become: true
+  apt:
+    name:
+      - docker
+      - docker-engine
+    state: absent
+
+- name: Install dependencies
+  become: true
+  apt:
+    name:
+      - gnupg
+
+- name: Add GPG key for Docker
+  become: true
+  ansible.builtin.apt_key:
+    url: https://download.docker.com/linux/ubuntu/gpg
+    state: present
+
+- name: Add Docker repository to apt
+  become: true
+  apt_repository:
+    repo: "deb https://download.docker.com/linux/ubuntu {{ ubuntu_release_name }} stable"
+    update_cache: yes
+
+- name: Install Docker CE
+  become: true
+  apt:
+    name:
+      - docker-ce
+      - docker-ce-cli
+      - containerd.io
+
+- name: Add user to docker group
+  become: true
+  ansible.builtin.user:
+    name: "{{ ansible_user_id }}"
+    groups:
+      - docker
+    append: yes
+
+- name: Install docker-compose
+  become: true
+  get_url: 
+    url : https://github.com/docker/compose/releases/download/1.29.2/docker-compose-Linux-x86_64
+    dest: /usr/local/bin/docker-compose
+    mode: 0755
