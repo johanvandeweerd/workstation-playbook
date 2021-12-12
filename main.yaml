@@ -37,3 +37,5 @@
       tags: docker
     - role: vlc
       tags: vlc
+    - role: night-light
+      tags: night-light
