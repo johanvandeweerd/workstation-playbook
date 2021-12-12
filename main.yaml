@@ -35,3 +35,5 @@
       tags: zsh
     - role: docker
       tags: docker
+    - role: vlc
+      tags: vlc
