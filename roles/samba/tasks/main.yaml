@@ -7,7 +7,7 @@
 
 - name: Check if smbcredentials file exists
   stat: 
-    path: "{{ ansible_user_dir }}/.smbcredentials"
+    path: "~/.smbcredentials"
   register: credentials_file
 
 - name: Get Samba password from 1Password
