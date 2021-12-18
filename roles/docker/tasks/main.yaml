@@ -1,6 +1,6 @@
 - name: Ensure old versions of Docker are not installed
   become: true
-  apt:
+  ansible.builtin.apt:
     name:
       - docker
       - docker-engine
@@ -8,7 +8,7 @@
 
 - name: Install dependencies
   become: true
-  apt:
+  ansible.builtin.apt:
     name:
       - gnupg
 
@@ -26,7 +26,7 @@
 
 - name: Install Docker CE
   become: true
-  apt:
+  ansible.builtin.apt:
     name:
       - docker-ce
       - docker-ce-cli

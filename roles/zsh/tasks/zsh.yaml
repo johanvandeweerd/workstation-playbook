@@ -1,6 +1,6 @@
 - name: Install zsh
   become: true
-  apt:
+  ansible.builtin.apt:
     name:
       - zsh
 

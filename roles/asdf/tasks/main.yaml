@@ -1,5 +1,6 @@
 - name: Install git
-  apt:
+  become: true
+  ansible.builtin.apt:
     name:
       - git
 

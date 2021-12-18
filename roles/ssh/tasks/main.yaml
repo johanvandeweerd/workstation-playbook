@@ -1,5 +1,6 @@
 - name: Install keyring software
-  apt:
+  become: true
+  ansible.builtin.apt:
     name:
       - gnome-keyring
       - keychain

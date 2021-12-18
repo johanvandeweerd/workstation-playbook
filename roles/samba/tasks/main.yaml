@@ -1,6 +1,6 @@
 - name: Install samba and cifs-utils
   become: true
-  apt:
+  ansible.builtin.apt:
     name:
       - samba
       - cifs-utils
