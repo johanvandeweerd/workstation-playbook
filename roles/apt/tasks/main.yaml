@@ -9,4 +9,6 @@
       - jq
       - tree
       - vim
+      - virtualbox
+      - virtualbox-guest-additions-iso
       - xclip
