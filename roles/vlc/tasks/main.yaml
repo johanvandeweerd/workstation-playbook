@@ -4,6 +4,12 @@
     name:
       - vlc
 
+- name: Create VLC config directory
+  ansible.builtin.file:
+    dest: ~/snap/vlc/common/
+    state: directory
+    mode: 0755
+
 - name: Symlink the VLC config file
   ansible.builtin.file:
     src: "{{ playbook_dir }}/roles/vlc/files/vlcrc"

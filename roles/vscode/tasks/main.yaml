@@ -5,6 +5,12 @@
     name:
     - code
 
+- name: Create Visual Studio Code config directory
+  ansible.builtin.file:
+    dest: ~/.config/Code/User/
+    state: directory
+    mode: 0700
+
 - name: Symlink the settings.json file
   ansible.builtin.file:
     src: "{{ playbook_dir }}/roles/vscode/files/settings.json"

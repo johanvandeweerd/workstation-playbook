@@ -9,6 +9,12 @@
     src: p10k.zsh
     dest: ~/.p10k.zsh
 
+- name: Create fonts directory
+  ansible.builtin.file:
+    dest: ~/.local/share/fonts/
+    state: directory
+    mode: 0755
+
 - name: Install font for Powerlevel10k theme
   get_url:
     url: https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/Meslo/S/Regular/complete/Meslo%20LG%20S%20Regular%20Nerd%20Font%20Complete.ttf?raw=true
