@@ -1,3 +1,4 @@
+
 - name: Install VLC through Snap
   become: true
   community.general.snap:
@@ -24,9 +25,8 @@
     path: "{{ playbook_dir }}/roles/vlc/files/vlcrc"
     mode: 0444
 
-# https://askubuntu.com/questions/1030281/change-default-applications-from-script
-- name: Set VLC as default application for video files
-  ansible.builtin.replace:
-    path: ~/.config/mimeapps.list
-    regexp: org\.gnome\.Totem\.desktop
-    replace: vlc_vlc.desktop
+- name: Set VLC as default app
+  ansible.builtin.copy:
+    src: "{{ playbook_dir }}/roles/vlc/files/mimeapps.list"
+    dest: ~/.config/mimeapps.list
+    mode: 0600
