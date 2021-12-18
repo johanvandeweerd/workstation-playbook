@@ -1,4 +1,5 @@
 - name: Install Snap software
+  become: true
   community.general.snap:
     name:
       - 1password
@@ -8,6 +9,7 @@
       - yq
 
 - name: Install classic Snap software
+  become: true
   community.general.snap:
     classic: true
     name:

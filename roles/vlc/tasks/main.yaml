@@ -1,4 +1,5 @@
 - name: Install VLC through Snap
+  become: true
   community.general.snap:
     name:
       - vlc
