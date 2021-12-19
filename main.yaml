@@ -40,3 +40,5 @@
       tags: vlc
     - role: night-light
       tags: night-light
+    - role: wireshark
+      tags: wireshark

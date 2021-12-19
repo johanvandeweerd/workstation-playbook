@@ -1,0 +1,19 @@
+- name: Install wireshark
+  become: true
+  ansible.builtin.apt:
+    name:
+      - wireshark
+
+- name: Unattended reconfigure of wireshark-common
+  become: true
+  ansible.builtin.debconf:
+    name: locales
+    question: wireshark-common/install-setuid
+    value: true
+    vtype: boolean
+
+- name: Add execute rights to /usr/bin/dumpcap
+  become: true
+  ansible.builtin.file:
+    path: /usr/bin/dumpcap
+    mode: 0755
