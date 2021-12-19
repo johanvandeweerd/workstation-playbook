@@ -12,3 +12,4 @@
       - virtualbox
       - virtualbox-guest-additions-iso
       - xclip
+      - whois
