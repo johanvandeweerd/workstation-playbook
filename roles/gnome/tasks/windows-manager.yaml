@@ -13,5 +13,7 @@
       value: "'Yaru'"
     - key: /org/gnome/nautilus/list-view/default-zoom-level
       value: "'small'"
+    - key: /org/gnome/nautilus/preferences/default-folder-viewer
+      value: "'list-view'"
     - key: /org/gtk/settings/file-chooser/sort-directories-first
       value: "true"
