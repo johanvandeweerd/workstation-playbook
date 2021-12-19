@@ -23,6 +23,11 @@
     key: /org/gnome/shell/enabled-extensions
     value: "@as {{ (enabled_extensions.value  | default('[]', true) | string | replace(\"'\", '\"') | from_json + [full_name]) | unique }}"
 
+- name: Enable extension in dconf
+  dconf:
+    key: /org/gnome/shell/disable-user-extensions
+    value: "false"
+
 - name: Copy dconf schema of extension
   shell: "sudo cp -f ~/.local/share/gnome-shell/extensions/{{ full_name }}/schemas/*.xml /usr/share/glib-2.0/schemas"
 
