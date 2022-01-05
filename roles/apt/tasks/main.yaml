@@ -4,9 +4,11 @@
     name:
       - curl
       - chrome-gnome-shell
+      - cloud-image-utils
       - dconf-editor
       - gnome-tweak-tool
       - jq
+      - parallel
       - tree
       - vim
       - virtualbox
