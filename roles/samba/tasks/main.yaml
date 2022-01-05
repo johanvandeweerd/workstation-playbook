@@ -39,5 +39,5 @@
     state: mounted
     fstype: cifs
     name: /media/shared/
-    src: //10.31.10.20/shared
+    src: //10.31.10.2/shared
     opts: "auto,credentials={{ ansible_user_dir }}/.smbcredentials,iocharset=utf8,sec=ntlmssp,uid={{ ansible_user_id }},rw,vers=2.1"
