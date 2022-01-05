@@ -1,5 +1,4 @@
 {
-    "diffEditor.ignoreTrimWhitespace": false,
     "editor.minimap.enabled": false,
     "editor.renderWhitespace": "all",
     "explorer.confirmDelete": false,
