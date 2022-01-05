@@ -9,11 +9,14 @@ Host router
   IdentitiesOnly yes
   UseKeychain yes
 
-Host pi01 pi02 pi03 pi04 pi05 pi06 pi07 pi08
+Host pi01 pi02 pi03 pi04 pi05 pi06 pi07 pi08 master
   User engine31
   IdentityFile ~/.ssh/cluster_rsa
   IdentitiesOnly yes
   UseKeychain yes
+
+Host master
+  HostName 10.31.10.13
 
 Host bitbucket.org
   HostName bitbucket.org
