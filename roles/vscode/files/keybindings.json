@@ -1,0 +1,7 @@
+[
+    {
+        "key": "ctrl+w",
+        "command": "workbench.action.closeWindow",
+        "when": "!editorIsOpen"
+    }
+]

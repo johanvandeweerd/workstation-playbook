@@ -18,6 +18,13 @@
     force: true
     state: link
 
+- name: Symlink the keybindings.json file
+  ansible.builtin.file:
+    src: "{{ playbook_dir }}/roles/vscode/files/keybindings.json"
+    dest: ~/.config/Code/User/keybindings.json
+    force: true
+    state: link
+
 - name: Install extensions
   ansible.builtin.include_tasks: extension.yaml
   with_items:
