@@ -9,7 +9,7 @@
     repo: https://github.com/asdf-vm/asdf.git
     dest: ~/.asdf
     version: v0.8.1
-    depth: 1
+    depth: "1"
 
 - name: Install asdf plugins
   include_role:
@@ -41,3 +41,6 @@
       - name: terraform
         versions:
           - 0.15.5
+      - name: stern
+        versions:
+          - 1.20.0
