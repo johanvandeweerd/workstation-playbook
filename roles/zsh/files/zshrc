@@ -66,5 +66,8 @@ export GOROOT=$GOV/go
 export GOPATH="${HOME}/go"
 export PATH="${PATH}:${GOPATH}/bin:${GOROOT}/bin"
 
+# Kubernetes settings
+export KUBECONFIG=~/.kube/config:~/.kube/cluster.conf
+
 # Output profiling info
 # zprof
