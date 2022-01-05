@@ -4,10 +4,10 @@
     name:
       - 1password
       - pinta
+      - rpi-imager
       - spotify
       - vlc
       - yq
-      - rpi-imager
 
 - name: Install classic Snap software
   become: true
