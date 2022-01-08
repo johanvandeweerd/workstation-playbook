@@ -8,12 +8,16 @@ Host router
   IdentityFile ~/.ssh/home_rsa
   IdentitiesOnly yes
   UseKeychain yes
+# StrictHostKeyChecking no
+# UserKnownHostsFile /dev/null
 
 Host pi01 pi02 pi03 pi04 pi05 pi06 pi07 pi08 master
   User engine31
   IdentityFile ~/.ssh/cluster_rsa
   IdentitiesOnly yes
   UseKeychain yes
+# StrictHostKeyChecking no
+# UserKnownHostsFile /dev/null
 
 Host master
   HostName 10.31.10.13
