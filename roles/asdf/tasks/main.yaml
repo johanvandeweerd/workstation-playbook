@@ -46,3 +46,6 @@
       - name: stern
         versions:
           - 1.20.0
+      - name: argocd
+        versions:
+          - 2.2.2
