@@ -8,6 +8,7 @@
       - dconf-editor
       - gnome-tweak-tool
       - jq
+      - nfs-common
       - parallel
       - tree
       - vim
