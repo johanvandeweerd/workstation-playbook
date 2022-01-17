@@ -12,6 +12,7 @@
       - parallel
       - tree
       - vim
+      - vagrant
       - virtualbox
       - virtualbox-guest-additions-iso
       - xclip
