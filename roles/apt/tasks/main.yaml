@@ -9,6 +9,7 @@
       - gnome-tweak-tool
       - jq
       - nfs-common
+      - open-iscsi
       - parallel
       - tree
       - vim
