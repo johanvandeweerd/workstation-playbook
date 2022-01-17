@@ -33,7 +33,16 @@
     mode: 0400
   when: not credentials_file.stat.exists
 
-- name: Mount shared volume from NAS
+- name: Mount shared volume 'johan' from NAS
+  become: true
+  mount:
+    state: mounted
+    fstype: cifs
+    name: /media/johan/
+    src: //10.31.10.2/johan
+    opts: "auto,credentials={{ ansible_user_dir }}/.smbcredentials,iocharset=utf8,sec=ntlmv2,uid={{ ansible_user_id }},rw"
+
+- name: Mount shared volume 'shared' from NAS
   become: true
   mount:
     state: mounted
