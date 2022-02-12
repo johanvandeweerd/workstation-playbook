@@ -69,5 +69,8 @@ export PATH="${PATH}:${GOPATH}/bin:${GOROOT}/bin"
 # Kubernetes settings
 export KUBECONFIG=~/.kube/config:~/.kube/cluster.config:~/.kube/kind.config
 
+# Stern autocompletion
+source <(stern --completion=zsh)
+
 # Output profiling info
 # zprof
