@@ -3,38 +3,34 @@
 IgnoreUnknown UseKeychain
 
 Host router
-  HostName router
   User ubnt
-  IdentityFile ~/.ssh/home_rsa
-  IdentitiesOnly yes
-  UseKeychain yes
-# StrictHostKeyChecking no
-# UserKnownHostsFile /dev/null
+  IdentityFile ~/.ssh/router_rsa
+
+Host access-point-1 access-point-2 access-point-3
+  User engine31
+  IdentityFile ~/.ssh/unifi_rsa
+
+Host nas
+  User johan
+  IdentityFile ~/.ssh/nas_rsa
 
 Host pi01 pi02 pi03 pi04 pi05 pi06 pi07 pi08 master
   User engine31
   IdentityFile ~/.ssh/cluster_rsa
-  IdentitiesOnly yes
-  UseKeychain yes
-# StrictHostKeyChecking no
-# UserKnownHostsFile /dev/null
-
-Host master
-  HostName 10.31.10.13
 
 Host bitbucket.org
-  HostName bitbucket.org
   User git
   IdentityFile ~/.ssh/bitbucket_rsa
-  IdentitiesOnly yes
-  UseKeychain yes
 
 Host github.com
-  HostName github.com
   User git
   IdentityFile ~/.ssh/github_rsa
+
+Host *
+  AddKeysToAgent yes
   IdentitiesOnly yes
   UseKeychain yes
 
-Host *
-   AddKeysToAgent yes
+# Ignore use of known_hosts file
+# StrictHostKeyChecking no
+# UserKnownHostsFile /dev/null

@@ -2,4 +2,5 @@ ssh_keys:
   - bitbucket_rsa
   - cluster_rsa
   - github_rsa
-  - home_rsa
+  - nas_rsa
+  - router_rsa
