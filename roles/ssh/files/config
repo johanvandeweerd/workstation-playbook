@@ -31,6 +31,11 @@ Host *
   IdentitiesOnly yes
   UseKeychain yes
 
-# Ignore use of known_hosts file
+# # Ignore use of known_hosts file
+# StrictHostKeyChecking no
+# UserKnownHostsFile /dev/null
+
+# # Force use of password instead of SSH keys
+# PubkeyAuthentication no
 # StrictHostKeyChecking no
 # UserKnownHostsFile /dev/null
