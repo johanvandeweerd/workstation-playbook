@@ -11,6 +11,7 @@
       - nfs-common
       - open-iscsi
       - parallel
+      - solaar
       - tree
       - vim
       - vagrant
