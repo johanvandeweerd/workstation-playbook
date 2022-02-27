@@ -1,6 +1,9 @@
 - name: Configure desktop
   ansible.builtin.include_tasks: desktop.yaml
 
+- name: Configure interface
+  ansible.builtin.include_tasks: interface.yaml
+
 - name: Configure windows manager
   ansible.builtin.include_tasks: windows-manager.yaml
 

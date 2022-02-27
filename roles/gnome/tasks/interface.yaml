@@ -1,0 +1,4 @@
+- name: Configure Gnome interface
+  dconf:
+    key: /org/gnome/desktop/interface/clock-show-seconds
+    value: "true"
