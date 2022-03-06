@@ -56,7 +56,7 @@ extensions:
       - key: /com/github/amezin/ddterm/window-resizable
         value: "false"
       - key: /com/github/amezin/ddterm/window-size
-        value: "0.5"
+        value: "0.64"
       - key: /com/github/amezin/ddterm/shortcut-switch-to-tab-1
         value: "@as []"
       - key: /com/github/amezin/ddterm/shortcut-switch-to-tab-2
