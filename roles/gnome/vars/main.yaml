@@ -23,7 +23,7 @@ extensions:
         value: "true"
   - name: ddterm
     full_name: ddterm@amezin.github.com
-    url: https://extensions.gnome.org/extension-data/ddtermamezin.github.com.v24.shell-extension.zip
+    url: https://extensions.gnome.org/extension-data/ddtermamezin.github.com.v28.shell-extension.zip
     configuration:
       - key: /com/github/amezin/ddterm/background-opacity
         value: "0.94999999999999996"
@@ -81,7 +81,7 @@ extensions:
         value: "['rgb(23,20,33)', 'rgb(192,28,40)', 'rgb(38,162,105)', 'rgb(162,115,76)', 'rgb(45,112,195)', 'rgb(163,71,186)', 'rgb(42,161,179)', 'rgb(208,207,204)', 'rgb(94,92,100)', 'rgb(246,97,81)', 'rgb(51,218,122)', 'rgb(233,173,12)', 'rgb(42,123,222)', 'rgb(192,97,203)', 'rgb(51,199,222)', 'rgb(255,255,255)']"
   - name: gTile
     full_name: gTile@vibou
-    url: https://extensions.gnome.org/extension-data/gTilevibou.v47.shell-extension.zip
+    url: https://extensions.gnome.org/extension-data/gTilevibou.v48.shell-extension.zip
     configuration:
       - key: /org/gnome/shell/extensions/gtile/action-change-tiling
         value: "@as []"
