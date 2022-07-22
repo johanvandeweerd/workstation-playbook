@@ -23,7 +23,7 @@ extensions:
         value: "true"
   - name: ddterm
     full_name: ddterm@amezin.github.com
-    url: https://extensions.gnome.org/extension-data/ddtermamezin.github.com.v28.shell-extension.zip
+    url: https://extensions.gnome.org/extension-data/ddtermamezin.github.com.v29.shell-extension.zip
     configuration:
       - key: /com/github/amezin/ddterm/background-opacity
         value: "0.94999999999999996"
@@ -81,7 +81,7 @@ extensions:
         value: "['rgb(23,20,33)', 'rgb(192,28,40)', 'rgb(38,162,105)', 'rgb(162,115,76)', 'rgb(45,112,195)', 'rgb(163,71,186)', 'rgb(42,161,179)', 'rgb(208,207,204)', 'rgb(94,92,100)', 'rgb(246,97,81)', 'rgb(51,218,122)', 'rgb(233,173,12)', 'rgb(42,123,222)', 'rgb(192,97,203)', 'rgb(51,199,222)', 'rgb(255,255,255)']"
   - name: gTile
     full_name: gTile@vibou
-    url: https://extensions.gnome.org/extension-data/gTilevibou.v48.shell-extension.zip
+    url: https://extensions.gnome.org/extension-data/gTilevibou.v50.shell-extension.zip
     configuration:
       - key: /org/gnome/shell/extensions/gtile/action-change-tiling
         value: "@as []"
@@ -196,7 +196,7 @@ extensions:
       - key: /org/gnome/shell/extensions/gtile/resize-up-vi
         value: "@as []"
       - key: /org/gnome/shell/extensions/gtile/resize1
-        value: "'7x1 0:0 1:0'"
+        value: "'7x1 1:1 2:1'"
       - key: /org/gnome/shell/extensions/gtile/resize10
         value: "''"
       - key: /org/gnome/shell/extensions/gtile/resize11
@@ -218,7 +218,7 @@ extensions:
       - key: /org/gnome/shell/extensions/gtile/resize19
         value: "''"
       - key: /org/gnome/shell/extensions/gtile/resize2
-        value: "'7x1 2:0 4:0'"
+        value: "'7x1 3:1 5:1'"
       - key: /org/gnome/shell/extensions/gtile/resize20
         value: "''"
       - key: /org/gnome/shell/extensions/gtile/resize21
@@ -240,21 +240,21 @@ extensions:
       - key: /org/gnome/shell/extensions/gtile/resize29
         value: "''"
       - key: /org/gnome/shell/extensions/gtile/resize3
-        value: "'7x1 5:0 6:0'"
+        value: "'7x1 6:1 7:1'"
       - key: /org/gnome/shell/extensions/gtile/resize30
         value: "''"
       - key: /org/gnome/shell/extensions/gtile/resize4
-        value: "'3x1 0:0 0:0'"
+        value: "'3x1 1:1 1:1'"
       - key: /org/gnome/shell/extensions/gtile/resize5
-        value: "'3x1 1:0 1:0'"
+        value: "'3x1 2:1 2:1'"
       - key: /org/gnome/shell/extensions/gtile/resize6
-        value: "'3x1 2:0 2:0'"
+        value: "'3x1 3:1 3:1'"
       - key: /org/gnome/shell/extensions/gtile/resize7
-        value: "'2x1 0:0 0:0'"
+        value: "'2x1 1:1 1:1'"
       - key: /org/gnome/shell/extensions/gtile/resize8
-        value: "'1x1 0:0 0:0'"
+        value: "'1x1 1:1 1:1'"
       - key: /org/gnome/shell/extensions/gtile/resize9
-        value: "'2x1 1:0 1:0'"
+        value: "'2x1 2:1 2:1'"
       - key: /org/gnome/shell/extensions/gtile/set-tiling
         value: "@as []"
       - key: /org/gnome/shell/extensions/gtile/show-icon
