@@ -23,6 +23,8 @@
       - name: golang
         versions:
           - 1.17.3
+          - 1.18.4
+        global: 1.18.4
       - name: helm
         versions:
           - 3.7.1
